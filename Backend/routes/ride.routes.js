@@ -5,8 +5,6 @@ const rideController = require('../controllers/ride.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 
 
-
-//user konsa hai , destination,pickup 
 router.post('/create',
     authMiddleware.authUser,
     body('pickup').isString().isLength({ min: 3 }).withMessage('Invalid pickup address'),
@@ -14,8 +12,6 @@ router.post('/create',
     body('vehicleType').isString().isIn([ 'auto', 'car', 'moto' ]).withMessage('Invalid vehicle type'),
     rideController.createRide
 )
-
-
 
 router.get('/get-fare',
     authMiddleware.authUser,

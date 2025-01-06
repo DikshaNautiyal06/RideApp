@@ -5,7 +5,7 @@ import { UserDataContext } from '../context/UserContext'
 
 
 
-const UserSignup = () => {
+const UserSignUp = () => {
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
   const [ firstName, setFirstName ] = useState('')
@@ -51,8 +51,8 @@ const UserSignup = () => {
   return (
     <div>
       <div className='p-7 h-screen flex flex-col justify-between'>
-        <div>
-          <img className='w-16 mb-10' src="/freepik_br_d736b35f-478a-4a46-a44e-e79dd48451a9.png" alt="" />
+      <div> 
+        <img className='w-16 mb-10' src="/freepik_br_d736b35f-478a-4a46-a44e-e79dd48451a9.png" alt="" />
 
           <form onSubmit={(e) => {
             submitHandler(e)
@@ -122,4 +122,4 @@ const UserSignup = () => {
   )
 }
 
-export default UserSignup
+export default UserSignUp
